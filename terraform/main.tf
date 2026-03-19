@@ -102,8 +102,6 @@ resource "aws_cloudfront_distribution" "website" {
     Environment = var.environment
     Name        = "${var.project_name}-cdn"
   }
-
-  depends_on = [aws_s3_bucket_policy.website]
 }
 
 # Data source for current AWS account ID
